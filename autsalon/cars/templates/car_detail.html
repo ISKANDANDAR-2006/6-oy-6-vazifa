@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ car.model_name }}</title>
+</head>
+<body>
+    <h1>{{ car.brand.name }} {{ car.model_name }}</h1>
+    <p>Yil: {{ car.year }}</p>
+    <p>Narx: ${{ car.price }}</p>
+    <p>Izoh: {{ car.description }}</p>
+
+    <a href="{% url 'brand_detail' car.brand.id %}">Brendga qaytish</a>
+</body>
+</html>
+l>

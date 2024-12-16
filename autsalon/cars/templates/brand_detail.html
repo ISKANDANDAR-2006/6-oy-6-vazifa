@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ brand.name }}</title>
+</head>
+<body>
+    <h1>{{ brand.name }}</h1>
+    <p>Mamlakat: {{ brand.country }}</p>
+
+    <h2>Mashinalari:</h2>
+    <ul>
+        {% for car in cars %}
+            <li><a href="{% url 'car_detail' car.id %}">{{ car.model_name }} ({{ car.year }})</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'brand_list' %}">Orqaga</a>
+</body>
+</html>
